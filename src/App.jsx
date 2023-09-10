@@ -18,7 +18,7 @@ function App() {
         <LoadingBar color='#f11946' progress={progress} height={4} />
         <Navbar changenav={handlenav} />
         <Routes>
-          <Route exact path="/" element={<News progress={setprogress} pagesize={size} category={"general"} nav={nav} key={"general"} />} />
+          <Route exact path="/News_App" element={<News progress={setprogress} pagesize={size} category={"general"} nav={nav} key={"general"} />} />
           <Route exact path="/business" element={<News progress={setprogress} pagesize={size} category={"business"} nav={nav} key={"business"} />} />
           <Route exact path="/sports" element={<News progress={setprogress} pagesize={size} category={"sports"} nav={nav} key={"sports"} />} />
           <Route exact path="/technology" element={<News progress={setprogress} pagesize={size} category={"technology"} nav={nav} key={"technology"} />} />
