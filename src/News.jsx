@@ -12,7 +12,7 @@ export default function News(props) {
   // }
   const fetchMoreData = async () => {
     props.progress(10);
-    const surya = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=571cdb022a2a4abebc45ef31ca9e15d0&page=${news.page + 1}&pageSize=${props.pagesize}&category=${props.category}`);
+    const surya = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=497436b503b24d3292c9a1fe707fdd1f&page=${news.page + 1}&pageSize=${props.pagesize}&category=${props.category}`);
     document.title = `${props.category} - NewsFront`;
     const data = await surya.json();
     props.progress(100);
@@ -31,7 +31,7 @@ export default function News(props) {
       setnews((prev) => {
         return { ...prev, loading: true };
       })
-      const surya = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=571cdb022a2a4abebc45ef31ca9e15d0&page=${news.page}&pageSize=${props.pagesize}&category=${props.category}`);
+      const surya = await fetch(`https://newsapi.org/v2/top-headlines?country=in&apiKey=497436b503b24d3292c9a1fe707fdd1f&page=${news.page}&pageSize=${props.pagesize}&category=${props.category}`);
       document.title = `${props.category} - NewsFront`;
       const data = await surya.json();
       props.progress(100);
